@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "corona.corona.corona",
+        "description": "simple corona tracker",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#corona-Display",
+        "navigationComponentName": "corona.corona",
+        "intentSemanticObject": "corona",
+        "intentAction": "Display",
+        "html5ApplicationName": "corona",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "8fdd1c69-afd1-4e10-9771-b9a00c8f10e3"
+        ],
+        "contentPackages": [
+            "33c24623-33ec-4d79-9f84-cc9e7ca5efb6"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Simple Corona Tracker",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Simple Corona Tracker,Subtitle",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

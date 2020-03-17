@@ -1,0 +1,37 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="corona.corona.controller.coronaView1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+							<Table columns="{/cols}" id="__table0" items="{/items}">
+						<customData>
+							<sap.ui.core:CustomData id="__data2" key="sap-ui-fastnavgroup" value="true" writeToDom="true" xmlns:sap.ui.core="sap.ui.core"/>
+						</customData>
+							<items>
+								<ColumnListItem type="Active" id="_item0">
+									<cells>
+										<Text text="{country}"/>
+										<Text text="{cases}"/>
+										<Text text="{todayCases}"/>
+										<Text text="{deaths}"/>
+										<Text text="{todayDeaths}"/>
+										<Text text="{recovered}"/>
+										<Text text="{critical}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<columns>
+								<Column>
+									<header>
+										<Label text="{name}"/>
+									</header>
+								</Column>
+							</columns>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
