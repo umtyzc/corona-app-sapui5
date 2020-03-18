@@ -1,16 +1,10 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	"use strict";
-
 	return Controller.extend("corona.corona.controller.coronaView1", {
 		onInit: function () {
 			this._loadCorona();
 		},
-
 		_mapResults: function (results) {
-			
-	
 			var oModel = this.getView().getModel();
 			var coronaResults = [];
 			for (var i = 0; i < results.length; i++) {
@@ -25,33 +19,34 @@ sap.ui.define([
 					critical: oTemp.critical
 				});
 			}
-
 			oModel.setProperty("/items", coronaResults);
 		},
 		_loadCorona: function () {
 			var oView = this.getView();
-
 			var sUrl = "/corona";
 			oView.setBusy(true);
-
 			var self = this;
-			$.get(sUrl)
-				.done(function (results) {
-					oView.setBusy(false);
-					self._mapResults(results);
-				})
-				.fail(function (err) {
-					oView.setBusy(false);
-					if (err !== undefined) {
-						var oErrorResponse = $.parseJSON(err.responseText);
-						sap.m.MessageToast.show(oErrorResponse.message, {
-							duration: 6000
-						});
-					} else {
-						sap.m.MessageToast.show("Unknown error!");
-					}
-				});
+			$.get(sUrl).done(function (results) {
+				oView.setBusy(false);
+				self._mapResults(results);
+			}).fail(function (err) {
+				oView.setBusy(false);
+				if (err !== undefined) {
+					var oErrorResponse = $.parseJSON(err.responseText);
+					sap.m.MessageToast.show(oErrorResponse.message, {
+						duration: 6000
+					});
+				} else {
+					sap.m.MessageToast.show("Unknown error!");
+				}
+			});
+		},
+		/**
+		 *@memberOf corona.corona.controller.coronaView0
+		 */
+		onPress: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("coronaView1");
 		}
-
 	});
 });

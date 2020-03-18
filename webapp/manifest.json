@@ -65,11 +65,9 @@
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -84,11 +82,24 @@
 					"target": []
 				}
 			},
-			"routes": [],
+			"routes": [{
+				"pattern": "",
+				"name": "coronaView0",
+				"target": "coronaView0"
+			}, {
+				"pattern": "coronaView1",
+				"name": "coronaView1",
+				"target": "coronaView1"
+			}],
+
 			"targets": {
 				"coronaView0": {
 					"viewType": "XML",
 					"viewName": "coronaView0"
+				},
+				"coronaView1": {
+					"viewType": "XML",
+					"viewName": "coronaView1"
 				}
 			}
 		}
