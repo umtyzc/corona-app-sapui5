@@ -65,9 +65,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -82,16 +84,18 @@
 					"target": []
 				}
 			},
-			"routes": [{
-				"pattern": "",
-				"name": "coronaView0",
-				"target": "coronaView0"
-			}, {
-				"pattern": "coronaView1",
-				"name": "coronaView1",
-				"target": "coronaView1"
-			}],
-
+			"routes": [
+				{
+					"pattern": "",
+					"name": "coronaView0",
+					"target": "coronaView0"
+				},
+				{
+					"pattern": "coronaView1",
+					"name": "coronaView1",
+					"target": "coronaView1"
+				}
+			],
 			"targets": {
 				"coronaView0": {
 					"viewType": "XML",

@@ -5,7 +5,19 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content><Button xmlns="sap.m" text="Raporun Tüm Verilerini Görüntüle" id="button0" activeIcon="sap-icon://activities" press="onPress"/>
+					<!--<Panel expandable="true" expanded="false" headerText="Click To See Total Cases/Deaths" width="auto" class="sapUiResponsiveMargin">-->
+					<!--<content>-->
+					<!--</content>-->
+					<!--</Panel>-->
+					<content>
+						<VBox width="100%" id="vbox0" alignItems="Start" alignContent="SpaceBetween" backgroundDesign="Solid" direction="Column" renderType="List">
+							<items>
+								<Text xmlns="sap.m" text="Total Cases: {/sum1}" id="text1" textAlign="Center"/>
+								<Text xmlns="sap.m" text="Total Deaths: {/sum2}" id="text2" textAlign="Center"/>
+							</items>
+						</VBox>
+						<Button xmlns="sap.m" text="Raporun Tüm Verilerini Görüntüle" id="button0" activeIcon="sap-icon://activities" press="onPress"
+							busyIndicatorSize="Large" icon="sap-icon://activities" textDirection="RTL" iconFirst="false"/>
 						<viz:VizFrame id="idVizFrame" height="100%" width="100%" vizType="donut">
 							<viz:dataset>
 								<viz.data:FlattenedDataset data="{/items}">

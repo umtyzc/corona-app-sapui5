@@ -7,12 +7,14 @@ sap.ui.define([
 		onInit: function () {
 			this._loadCorona();
 		},
-		
-	_mapResults: function(results) {
+
+		_mapResults: function (results) {
 			var oModel = this.getView().getModel();
 			var coronaResults = [];
+
 			for (var i = 0; i < results.length; i++) {
 				var oTemp = results[i];
+				// var totalCases += oTemp.cases;
 				coronaResults.push({
 					country: oTemp.country,
 					cases: oTemp.cases,
@@ -20,7 +22,7 @@ sap.ui.define([
 					deaths: oTemp.deaths,
 					todayDeaths: oTemp.todayDeaths,
 					recovered: oTemp.recovered,
-					critical:  oTemp.critical
+					critical: oTemp.critical
 				});
 			}
 
@@ -28,7 +30,7 @@ sap.ui.define([
 		},
 		_loadCorona: function () {
 			var oView = this.getView();
-	
+
 			var sUrl = "/corona";
 			oView.setBusy(true);
 
