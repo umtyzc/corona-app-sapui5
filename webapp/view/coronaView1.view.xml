@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="corona.corona.controller.coronaView1" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
-			<pages>
+			<pages> 
 				<Page id="page" title="{i18n>title}">
 					<content>
 							<VBox width="100%" id="vbox0" alignItems="Start" alignContent="SpaceBetween" direction="Column" renderType="List">

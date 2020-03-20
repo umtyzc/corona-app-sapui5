@@ -2,7 +2,7 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function (Controller) {
 	"use strict";
-
+ 
 	return Controller.extend("corona.corona.controller.coronaView1", {
 		onInit: function () {
 			this._loadCorona();
