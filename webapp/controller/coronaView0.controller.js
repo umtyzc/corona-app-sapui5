@@ -1,3 +1,5 @@
+
+
 sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	"use strict";
 	return Controller.extend("corona.corona.controller.coronaView1", {
@@ -22,8 +24,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					todayDeaths: oTemp.todayDeaths,
 					recovered: oTemp.recovered,
 					critical: oTemp.critical,
-					sum1: sum1 += oTemp.cases,
-					sum2: sum2 += oTemp.deaths
+					sum1: sum1 += oTemp.cases,//total cases
+					sum2: sum2 += oTemp.deaths//total deaths
 				});
 			}
 			oModel.setProperty("/items", coronaResults);

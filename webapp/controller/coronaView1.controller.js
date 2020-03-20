@@ -8,13 +8,16 @@ sap.ui.define([
 			this._loadCorona();
 		},
 
-		_mapResults: function (results) {
+			_mapResults: function (results) {
 			var oModel = this.getView().getModel();
 			var coronaResults = [];
-
+			var sum1;
+			var sum2;
+			sum1 = 0;
+			sum2 = 0;
 			for (var i = 0; i < results.length; i++) {
 				var oTemp = results[i];
-				// var totalCases += oTemp.cases;
+
 				coronaResults.push({
 					country: oTemp.country,
 					cases: oTemp.cases,
@@ -22,11 +25,14 @@ sap.ui.define([
 					deaths: oTemp.deaths,
 					todayDeaths: oTemp.todayDeaths,
 					recovered: oTemp.recovered,
-					critical: oTemp.critical
+					critical: oTemp.critical,
+					sum1: sum1 += oTemp.cases,//total cases
+					sum2: sum2 += oTemp.deaths//total deaths
 				});
 			}
-
 			oModel.setProperty("/items", coronaResults);
+			oModel.setProperty("/sum1", sum1);
+			oModel.setProperty("/sum2", sum2);
 		},
 		_loadCorona: function () {
 			var oView = this.getView();

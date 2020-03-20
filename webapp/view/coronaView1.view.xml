@@ -4,9 +4,15 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
+							<VBox width="100%" id="vbox0" alignItems="Start" alignContent="SpaceBetween" direction="Column" renderType="List">
+							<items>
+								<Text xmlns="sap.m" text="Total Cases: {/sum1}" id="text1" textAlign="Center"/>
+								<Text xmlns="sap.m" text="Total Deaths: {/sum2}" id="text2" textAlign="Center"/>
+							</items>
+						</VBox>
 							<Table columns="{/cols}" id="__table0" items="{/items}">
 						<customData>
-							<sap.ui.core:CustomData id="__data2" key="sap-ui-fastnavgroup" value="true" writeToDom="true" xmlns:sap.ui.core="sap.ui.core"/>
+							<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" id="__data2" key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
 						</customData>
 							<items>
 								<ColumnListItem type="Active" id="_item0">
