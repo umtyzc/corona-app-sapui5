@@ -3,7 +3,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	return Controller.extend("corona.corona.controller.coronaView1", {
 		onInit: function () {
 			this._loadCorona();
-		},
+		}, 
 		_mapResults: function (results) {
 			var oModel = this.getView().getModel();
 			var coronaResults = [];
