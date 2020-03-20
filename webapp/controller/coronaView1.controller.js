@@ -31,8 +31,8 @@ sap.ui.define([
 				});
 			}
 			oModel.setProperty("/items", coronaResults);
-			oModel.setProperty("/sum1", sum1);
-			oModel.setProperty("/sum2", sum2);
+			oModel.setProperty("/sum1", sum1);//total cases
+			oModel.setProperty("/sum2", sum2);//total deaths
 		},
 		_loadCorona: function () {
 			var oView = this.getView();
