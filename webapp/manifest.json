@@ -36,7 +36,7 @@
 			"viewName": "corona.corona.view.coronaView0",
 			"type": "XML",
 			"async": true,
-			"id": "coronaView0"
+			"id": "coronaSimulator"
 		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
