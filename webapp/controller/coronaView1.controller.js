@@ -2,13 +2,13 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function (Controller) {
 	"use strict";
- 
+
 	return Controller.extend("corona.corona.controller.coronaView1", {
 		onInit: function () {
 			this._loadCorona();
 		},
 
-			_mapResults: function (results) {
+		_mapResults: function (results) {
 			var oModel = this.getView().getModel();
 			var coronaResults = [];
 			var sum1;
@@ -17,8 +17,8 @@ sap.ui.define([
 			sum2 = 0;
 			for (var i = 0; i < results.length; i++) {
 				var oTemp = results[i];
-
 				coronaResults.push({
+					flag: oTemp.countryInfo.flag,
 					country: oTemp.country,
 					cases: oTemp.cases,
 					todayCases: oTemp.todayCases,
@@ -26,13 +26,15 @@ sap.ui.define([
 					todayDeaths: oTemp.todayDeaths,
 					recovered: oTemp.recovered,
 					critical: oTemp.critical,
-					sum1: sum1 += oTemp.cases,//total cases
-					sum2: sum2 += oTemp.deaths//total deaths
+					casesPerOneMillion: oTemp.casesPerOneMillion,
+					deathsPerOneMillion: oTemp.deathsPerOneMillion,
+					sum1: sum1 += oTemp.cases, //total cases
+					sum2: sum2 += oTemp.deaths //total deaths
 				});
 			}
 			oModel.setProperty("/items", coronaResults);
-			oModel.setProperty("/sum1", sum1);//total cases
-			oModel.setProperty("/sum2", sum2);//total deaths
+			oModel.setProperty("/sum1", sum1); //total cases
+			oModel.setProperty("/sum2", sum2); //total deaths
 		},
 		_loadCorona: function () {
 			var oView = this.getView();

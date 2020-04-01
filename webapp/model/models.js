@@ -11,30 +11,41 @@ sap.ui.define([
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
 		},
+		// createSocialModel: function () {
+		// 	var oModel = new JSONModel("./model/social.json");
+		// 	oModel.setDefaultBindingMode("OneWay");
+		// 	oModel.setData({
+		// 		items: []
+		// 	});
+		// 	return oModel;
+		// },
 		createAPIModel: function () {
 			var oModel = new JSONModel();
 			oModel.setData({
 				cols: [{
-					name: "country"
+					name: "Flag"
 				}, {
-					name: "cases"
+					name: "Country"
 				}, {
-					name: "todayCases"
+					name: "Cases"
 				}, {
-					name: "deaths"
+					name: "Today Cases"
 				}, {
-					name: "todayDeaths"
+					name: "Deaths"
 				}, {
-					name: "recovered"
+					name: "Today Deaths"
 				}, {
-					name: "critical"
-
+					name: "Recovered"
+				}, {
+					name: "Critical"
+				}, {
+					name: "CasesPer1Million"
+				}, {
+					name: "DeathsPer1Million"
 				}],
-
 				items: []
 			});
 			return oModel;
 		}
-
 	};
 });

@@ -16,7 +16,8 @@
 						</customData>
 							<items>
 								<ColumnListItem type="Active" id="_item0">
-									<cells>
+									<cells> 
+										<Image src="{flag}" width="50px"/>
 										<Text text="{country}"/>
 										<Text text="{cases}"/>
 										<Text text="{todayCases}"/>
@@ -24,11 +25,14 @@
 										<Text text="{todayDeaths}"/>
 										<Text text="{recovered}"/>
 										<Text text="{critical}"/>
+										<Text text="{casesPerOneMillion}"/>
+										<Text text="{deathsPerOneMillion}"/>
+										
 									</cells>
 								</ColumnListItem>
 							</items>
 							<columns>
-								<Column>
+								<Column width="auto">
 									<header>
 										<Label text="{name}"/>
 									</header>

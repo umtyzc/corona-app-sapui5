@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"corona/corona/model/models"
-], function (UIComponent, Device, models) {
+	"corona/corona/model/models",
+	"sap/ui/model/json/JSONModel"
+], function (UIComponent, Device, models, JSONModel) {
 	"use strict";
 
 	return UIComponent.extend("corona.corona.Component", {
@@ -23,10 +24,14 @@ sap.ui.define([
 			// enable routing
 			this.getRouter().initialize();
 
-			// set the device model
+			// set models
 			this.setModel(models.createDeviceModel(), "device");
 			
-			this.setModel(models.createAPIModel());
+			this.setModel(models.createAPIModel()); //report raw data covid-19
+			
+			// this.setModel(models.createSocialModel()); // for covid-19 related best twitter accounts
+		
+			
 		}
 	});
 });

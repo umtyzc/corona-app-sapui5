@@ -36,7 +36,7 @@
 			"viewName": "corona.corona.view.coronaView0",
 			"type": "XML",
 			"async": true,
-			"id": "coronaSimulator"
+			"id": "coronaView0"
 		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
@@ -62,6 +62,10 @@
 				"settings": {
 					"bundleName": "corona.corona.i18n.i18n"
 				}
+			},
+			"socialdata": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/social.json"
 			}
 		},
 		"resources": {
@@ -94,6 +98,13 @@
 					"pattern": "coronaView1",
 					"name": "coronaView1",
 					"target": "coronaView1"
+				},
+				{
+					"name": "coronaSocial",
+					"pattern": "coronaSocial",
+					"target": [
+						"coronaSocial"
+					]
 				}
 			],
 			"targets": {
@@ -104,6 +115,14 @@
 				"coronaView1": {
 					"viewType": "XML",
 					"viewName": "coronaView1"
+				},
+				"coronaresources": {
+					"viewType": "XML",
+					"viewName": "coronaresources"
+				},
+				"coronaSocial": {
+					"viewType": "XML",
+					"viewName": "coronaSocial"
 				}
 			}
 		}

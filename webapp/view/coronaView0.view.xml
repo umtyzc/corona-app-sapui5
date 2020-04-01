@@ -1,6 +1,8 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout" xmlns:chart="sap.suite.ui.commons" controllerName="corona.corona.controller.coronaView0" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout" xmlns:chart="sap.suite.ui.commons"
+	controllerName="corona.corona.controller.coronaView0" displayBlock="true">
 	<Shell id="shell">
-		<App id="app"> 
+		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<!--<Panel expandable="true" expanded="false" headerText="Click To See Total Cases/Deaths" width="auto" class="sapUiResponsiveMargin">-->
@@ -14,7 +16,8 @@
 								<Text xmlns="sap.m" text="Total Deaths: {/sum2}" id="text2" textAlign="Center"/>
 							</items>
 						</VBox>
-						<Button xmlns="sap.m" text="Show All Data Of Report" id="button0" activeIcon="sap-icon://activities" press="onPress" busyIndicatorSize="Large" icon="sap-icon://activities" textDirection="RTL" iconFirst="false"/>
+						<Button xmlns="sap.m" text="Show All Data Of Report" id="button0" activeIcon="sap-icon://activities" press="onPress"
+							busyIndicatorSize="Large" icon="sap-icon://activities" textDirection="RTL" iconFirst="false"/>
 						<viz:VizFrame id="idVizFrame" height="100%" width="100%" vizType="donut">
 							<viz:dataset>
 								<viz.data:FlattenedDataset data="{/items}">
